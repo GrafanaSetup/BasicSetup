@@ -7,17 +7,19 @@ services:
       restart: always
       volumes:
       - grafana:/var/lib/grafana
+      networks:
+        - some-net
       
-  mongo:
-      image: mongo
+  influx:
+      image: influxdb
       ports:
-        - 9087:27017
+        - 8086:8086
       volumes:
-        - mongodb:/data/db
+        - influxdb:/data/db
       networks:
         - some-net
 volumes:
-  mongodb:
+  influxdb:
   grafana:
 
 networks:
