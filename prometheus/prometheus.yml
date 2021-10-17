@@ -8,4 +8,17 @@ scrape_configs:
     static_configs:
       - targets:
           - 'prometheus:9090'
+         
+  - job_name: ping_service
+    metrics_path: /ping/metrics
+    static_configs:
+      - targets:
+          - 'network-monitor:7896'
+    
+  - job_name: bandwidth_service
+    scrape_interval: 5m
+    scrape_timeout: 1m
+    metrics_path: /bandwidth/metrics
+    static_configs:
+      - targets:
           - 'network-monitor:7896'
