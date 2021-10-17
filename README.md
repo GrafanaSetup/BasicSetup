@@ -1,6 +1,6 @@
 # Grafana Basic Setup
 
-Basic Grafana Setup with InfluxDB
+Basic Grafana Setup with Prometheus Database
 
 ## Setup
 Make sure you have Docker and docker-compose installed.
