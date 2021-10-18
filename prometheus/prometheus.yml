@@ -27,4 +27,4 @@ scrape_configs:
     metrics_path: /metrics
     static_configs:
       - targets:
-          - 'nulkl:3000'
+          - 'host-system-monitor:3000'
